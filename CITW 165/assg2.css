@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #6de21e;
+    text-shadow: 3px 3px 12px #f720c1dc;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+header {
+    align-items: center;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -8px;
+}
+
+body {
+    background-color: #fcf3aeb1;
+    background-image: url("../images/Rick-and-Morty-Plumbus-SR.jpeg");
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+}
+
+script {
+    font-size: 1.5em;
+    text-shadow: 3px 3px 12px #f720c1dc;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+em {
+    font-style: italic;
+    text-shadow: 3px 3px 12px #f720c1dc;
+}

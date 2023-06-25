@@ -1,0 +1,63 @@
+body {
+    background-color: #000057b1;
+    background-image: url("../images/Rick-and-Morty-Plumbus-SR.jpeg");
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+}
+
+H1 {
+    text-align: center;
+    font-size: 2em;
+    color: #6de21e;
+    text-shadow: 3px 3px 12px #f720c1dc;
+
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    background-color: #1784f2d8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: #0ed944;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 5px solid #00630a;
+}
+
+.action {
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    padding-left: 3px;
+    padding-right: 1px;
+    font-size: 17px;
+    border: 3px solid #00630a;
+    width: 85px;
+    margin-left: 43%;
+    margin-right: 43%;
+    background-color: rgb(2, 158, 112);
+    animation-name: example;
+    animation-duration: 30s;
+}
+
+@keyframes example {
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: rgb(0, 255, 145);
+    }
+
+    100% {
+        background-color: rgb(2, 4, 66);
+    }
+}
