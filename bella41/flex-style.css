@@ -1,0 +1,23 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    border: 1px #339de3;
+    padding: 0;
+    background-color: #86898c;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    width: 100px;
+    height: 100px;
+    background-color: #8ceab0;
+    margin: 8px;
+    list-style-type: none;
+    font-size: xx-large;
+    padding: 4px;
+    flex-basis: auto;
+}

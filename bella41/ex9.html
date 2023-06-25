@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Time Computer Museum</title>
+    <link rel="stylesheet" href="ex9.css">
+</head>
+<h1>Donation Web Form For The Old Time Computer Museum</h1>
+<!----Next, create a web form to accept pledges online for the "Old-Time Computer Museum." Be sure to have form fields for the following data the organization wants to gather. The pledge maker's name, address (complete with city, state and zip), telephone number, email address and the following giving levels: student ($20), individual ($45), family ($60), patron ($250), benefactor ($750). Also, allow the user to name an honoree or name the donation in-memory of someone.
+Make the form easy to read and add colors, font styling and images as appropriate.-->
+<hr>
+
+<body>
+    <table id="t1">
+        <th>Giving Levels</th>
+        <tr>
+            <td>
+                Levels
+            </td>
+            <td>Amount
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Student:
+            </td>
+            <td> $20</td>
+
+        </tr>
+        <tr>
+            <td>
+                Individual:
+            </td>
+            <td>$45
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Family:
+            </td>
+            <td>$60
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Patron:
+            </td>
+            <td>$250</td>
+        </tr>
+        <tr>
+            <td>
+                Benefactor:
+            </td>
+            <td>$750</td>
+        </tr>
+        <aside>
+            <img src="oldcomputer.jpg" alt="Retro Desktops">
+            <img src="oldcomputer2.jpeg" alt="Retro Desktops">
+            <img src="oldcomputer3.webp" alt="Retro Desktops">
+        </aside>
+    </table>
+    <form action="" method="get" class="form-example">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value=""><br><br>
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" value=""><br>
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city" value=""><br>
+        <label for="state">State:</label><br>
+        <input type="text" id="state" name="state" value=""><br>
+        <label for="zip">Zip:</label><br>
+        <input type="text" id="zip" name="zip" value=""><br><br>
+        <label for="phone">Phone:</label><br>
+        <input type="text" id="phone" name="phone" value=""><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email" value=""><br><br>
+        <label for="donation">Donation:</label><br>
+        <input type="text" id="donation" name="donation" value=""><br><br>
+        <label for="honoree">Honoree:</label><br>
+        <input type="text" id="honoree" name="honoree" value=""><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>

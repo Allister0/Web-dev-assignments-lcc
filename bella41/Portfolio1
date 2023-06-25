@@ -1,0 +1,29 @@
+/* Function to toggle mobile menu */
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+}
+
+/* Function to display a popup when a project is clicked */
+function displayPopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "block";
+}
+
+/* Function to close the popup */
+function closePopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
+}
+
+/* Function to run Python code in the browser */
+function runPython() {
+    var code = document.getElementById("python-code").value;
+    var output = document.getElementById("python-output");
+    try {
+        var result = Python.evaluate(code);
+        output.innerHTML = result.toString();
+    } catch (error) {
+        output.innerHTML = error.toString();
+    }
+}

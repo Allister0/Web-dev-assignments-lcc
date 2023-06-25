@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Python Code Runner</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            background-color: #1d1d1d;
+            color: #f8f8f2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .textbox {
+            background-color: #f8f8f2;
+            color: #1d1d1d;
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Consolas', 'Courier New', Courier, monospace;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, .3);
+            resize: vertical;
+            overflow: auto;
+        }
+
+        .btn {
+            background-color: #50fa7b;
+            color: #1d1d1d;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+            transition: background-color .3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #8be9fd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Python Code Runner</h1>
+    <label for="code-input">Enter your Python code:</label>
+    <br>
+    <textarea id="code-input" class="textbox"><?php include('sample_code.py');?></textarea>
+    <br>
+    <button class="btn" onclick="runCode()">Run Code</button>
+    <br>
+    <label for="code-output">Output:</label>
+    <br>
+    <textarea id="code-output" class="textbox" readonly></textarea>
+    <!-- Include the Skulpt library for running Python code in the browser -->
+    <script src="https://cdn.jsdelivr.net/npm/skulpt@0.10.1/dist/skulpt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skulpt@0.10.1/dist/skulpt-stdlib.js"></script>
+    <!-- Include the script for running Python code -->
+    <script src="PythonCodeRunner.js"></script>
+    <!-- JS code for running Python file -->
+    <script>
+        function runPythonFile() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    var result = this.responseText;
+                    document.getElementById("code-output").value = result;
+                }
+            };
+            xhr.open("GET", "run_file.php", true);
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>

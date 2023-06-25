@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assigment 10 Image quality control</title>
+    <link rel="stylesheet" href="Project2.css">
+</head>
+
+<body>
+    <img src="great-lakes-topo.png" alt="Great Lakes Topo Map">
+    <img src="circle24.png" alt="Circle">
+    <hr>
+
+    <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        stroke="red" fill="grey">
+        <defs>
+            <linearGradient id="fade" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="white" />
+                <stop offset="100%" stop-color="black" />
+            </linearGradient>
+        </defs>
+        <circle cx="50" cy="50" r="40" fill="url(#fade)" />
+        <circle cx="150" cy="50" r="4" />
+
+        <svg viewBox="0 0 10 10" x="200" width="100">
+            <circle cx="5" cy="5" r="4" />
+        </svg>
+        <text x="80" y="90" font-size="14">SVG size comparison</text>
+    </svg>
+</body>

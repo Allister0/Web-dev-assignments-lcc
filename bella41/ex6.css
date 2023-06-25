@@ -1,0 +1,39 @@
+body {
+    margin: 12px;
+}
+
+/* Change the default font for the document */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(252, 244, 244);
+}
+
+/* Change the default color of all headings */
+h1,
+h2,
+h3 {
+    color: #036396;
+}
+
+/* Add a border and styling to the div element */
+div {
+    border: 4px solid #036396;
+    /* Change this color to your preference */
+    width: 75%;
+    /* Change this width to your preference */
+    padding: 3px;
+    /* Change this padding to your preference */
+}
+
+/* Add a margin to paragraphs to cause content to indent */
+p {
+    margin: 10px;
+}
+
+/* Create a sidebar with the id "sidebar" */
+.sidebar {
+    float: right;
+    background-image: url("escargot.jpg");
+    width: 250px;
+    height: 345px;
+}

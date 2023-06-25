@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="Portfolio1.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="circle">
+                <img src="Jr1.png" alt="Profile Photo" class="circle-img">
+            </div>
+            <nav>
+                <ul id="menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="index.html">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+                <a href="#" class="icon" onclick="toggleMenu()">&#9776;</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to Allister's portfolio</h1>
+        <h2>Check out some of my latest projects</h2>
+    </div>
+
+    <main>
+        <section id="about">
+            <h3>About Me</h3>
+            <p> Aspiring Programmer, looking to improve upon the skills needed to be a phenomenal developer. I am
+                currently
+                studying and taking classes at LCC for my Computer Programmer Analysis program.
+                the following listings will showcase the future web documents and activities for class</p>
+        </section>
+
+        <section id="projects">
+            <h3>My Projects</h3>
+            <div class="container">
+                <div class="project" onclick="displayPopup()">
+                    <h4>Project 1</h4>
+                    <img src="javaProgram.png" alt="Course roster code in Java">
+                    <p>This project is a Course Roster Appication i coded in java, it takes input from the user and
+                        allows them to add instructors, courses, and students while also allowing you to remove them</p>
+                    <a href="Java Program Runner.html">Learn More</a>
+                </div>
+                <div class="project">
+                    <h4>Project 2</h4>
+                    <img src="AverageSalesCalculator python.png" alt="Project 2">
+                    <p>This Pyhton application is an Average Sales Calculator created to take each sale value of the
+                        salesman and give a new average</p>
+                    <a href="PythonCodeRunner.html">Learn More</a>
+                </div>
+                <div class="project">
+                    <h4>Project 3</h4>
+                    <img src="Screenshot 2023-04-11 at 10.50.46 PM (2).jpeg" alt="Project 3">
+                    <p>This project shows the use technical Responsive Web development skills and gives a little
+                        information on Anime and Manga and their origins. </p>
+                    <a href="ex8.html">Learn More</a>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h3>Contact Me</h3>
+            <form action="mailto:bella41@mail.lcc.edu" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write something.." style="height:200px"
+                    required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <a href="#" class="close" onclick="closePopup()">&times;</a>
+            <h4>GitHub link</h4>
+            <a href="https://github.com/Allister0">View Github</a>
+        </div>
+    </div>
+    <script src="Portfolio.js"></script>
+</body>
+
+</html>

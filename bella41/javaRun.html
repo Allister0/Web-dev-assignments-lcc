@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Java Program Runner</title>
+</head>
+
+<body>
+    <h1>Java Program Runner</h1>
+    <p>Enter your Java code below:</p>
+    <textarea id="code" rows="10" cols="50"></textarea>
+    <br>
+    <button onclick="runCode(document.getElementById('code'));">Run Code</button>
+    <button onclick="runSampleCode()">Run Sample Code</button>
+    <h2>Code Output</h2>
+    <div id="code-output"></div>
+    <h2>Program Output</h2>
+    <div id="output"></div>
+    <script>
+        function runCode(textarea) {
+            var code = input.value;
+
+            // Create a new iframe to run the code in a sandboxed environment
+            var iframe = document.createElement("iframe");
+            iframe.style.display = "none";
+            document.body.appendChild(iframe);
+            var iframeDoc = iframe.contentWindow.document;
+            iframeDoc.open();
+            iframeDoc.write("<html><body></body></html>");
+            iframeDoc.close();
+
+            // Define the runJava function in the iframe
+            var runJavaFunction = function () {
+                var output = "";
+                var originalConsole = console;
+                console = {
+                    log: function (message) {
+                        output += message + "\n";
+                    }
+                };
+                try {
+                    eval(code);
+                } catch (error) {
+                    output = error.message;
+                }
+                console = originalConsole;
+                return output;
+            };
+            iframe.contentWindow.runJava = runJavaFunction;
+
+            // Set up the Java code to be run
+            var script = iframeDoc.createElement("script");
+            script.textContent = code;
+            iframeDoc.body.appendChild(script);
+
+            // Get the Java code and output it to the code-output box
+            codeOutput.innerHTML = "<pre>" + code + "</pre>";
+
+            // Run the Java code and get the output
+            try {
+                var javaOutput = iframe.contentWindow.runJava();
+                output.innerHTML = javaOutput;
+            } catch (error) {
+                output.innerHTML = error.message;
+            }
+
+            // Remove the iframe from the DOM
+            document.body.removeChild(iframe);
+        }
+
+        function runSampleCode() {
+            var sampleCode = document.getElementById("sample-code").innerText;
+            var codeInput = document.getElementById("code");
+            codeInput.value = sampleCode;
+            runCode(codeInput);
+        }
+    </script>
+    <h2>Sample Java Program</h2>
+    <pre id="sample-code">
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello, world!");
+  }
+}
+    </pre>
+</body>
+
+</html>
